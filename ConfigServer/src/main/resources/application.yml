@@ -4,10 +4,12 @@ server:
 spring:
   application:
     name: config-server-git
-  profiles:
-    active: native
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/config
+        git:
+          uri: "https://github.com/ErennSaglam/microservice-config-server.git"
+          default-label: main
+          skip-ssl-validation: true
+          username: "ErennSaglam"
+          password: ${GIT_KEY}

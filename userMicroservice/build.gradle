@@ -2,4 +2,5 @@ dependencies {
     implementation libs.springBootDataMongo
     compileOnly libs.lombok
     annotationProcessor libs.lombok
+    implementation libs.springCloudConfig
 }
