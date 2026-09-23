@@ -4,4 +4,5 @@ dependencies {
     compileOnly libs.lombok
     annotationProcessor libs.lombok
     implementation libs.springCloudOpenFeign
+    implementation libs.springCloudConfig
 }

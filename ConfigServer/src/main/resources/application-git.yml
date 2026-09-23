@@ -1,0 +1,12 @@
+# Git backend: run with --spring.profiles.active=git
+# Requires GIT_KEY and a reachable config repo.
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/ErennSaglam/microservice-config-server.git"
+          default-label: main
+          skip-ssl-validation: true
+          username: "ErennSaglam"
+          password: ${GIT_KEY:}
