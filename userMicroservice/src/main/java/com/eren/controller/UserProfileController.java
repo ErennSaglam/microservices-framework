@@ -18,6 +18,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserProfileController {
     private final UserProfileService userProfileService;
+
     @PostMapping(CREATE_USER)
     public ResponseEntity<Boolean> creatUser(@RequestBody CreatUserRequestDto dto){
         userProfileService.createUser(dto);
@@ -26,5 +27,10 @@ public class UserProfileController {
     @GetMapping(GET_ALL)
     public ResponseEntity<List<UserProfile>> GetAll(){
         return ResponseEntity.ok(userProfileService.GetAll());
+    }
+
+    @GetMapping("/upper-name")
+    public ResponseEntity<String> upperName(String name) {
+       return ResponseEntity.ok(userProfileService.upperName(name));
     }
 }
