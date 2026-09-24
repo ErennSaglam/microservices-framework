@@ -75,3 +75,8 @@ docker build --platform linux/amd64 -t muhammedali55/egitimauth:v02 .
 docker build --platform linux/amd64 -t muhammedali55/egitimuser:v02 .
 
 ````
+
+## Kubernetes (son videolar)
+
+`Microservices/` klasöründe eğitimdeki Deployment ve Service YAML’leri var (J001–J011).
+Yerelde servisler `localhost:8888` Config Server kullanır; cluster’da isimler `service-loadbalancer-config` / `service-loadbalancer-user` olur.

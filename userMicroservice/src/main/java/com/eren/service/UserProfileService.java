@@ -22,19 +22,29 @@ public class UserProfileService {
                   .email(dto.getEmail())
                 .build());
     }
+    public List<UserProfile> getAll() {
+        return repository.findAll();
+    }
+
     public List<UserProfile> GetAll() {
-       return repository.findAll();
+        return getAll();
     }
 
     @Cacheable("upper-case")
     public String upperName(String name) {
-        String result =name.toUpperCase();
-        try{
-           Thread.sleep(3000L);
-        } catch (InterruptedException e) {}
+        String result = name.toUpperCase();
+        try {
+            Thread.sleep(3000L);
+        } catch (InterruptedException e) {
+        }
         return result;
     }
-    public void clearCach(){
+
+    public void clearCache() {
         cacheManager.getCache("upper-case").clear();
+    }
+
+    public void clearCach() {
+        clearCache();
     }
 }

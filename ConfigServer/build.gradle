@@ -3,5 +3,6 @@ plugins {
 }
 
 dependencies {
+    implementation libs.springCloudConfig
     implementation libs.springCloudConfigServer
 }

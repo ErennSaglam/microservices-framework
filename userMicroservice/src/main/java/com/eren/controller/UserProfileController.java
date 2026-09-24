@@ -26,7 +26,7 @@ public class UserProfileController {
     }
     @GetMapping(GET_ALL)
     public ResponseEntity<List<UserProfile>> GetAll(){
-        return ResponseEntity.ok(userProfileService.GetAll());
+        return ResponseEntity.ok(userProfileService.getAll());
     }
 
     @GetMapping("/upper-name")
